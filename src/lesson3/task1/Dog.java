@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson3.task1;
+package lesson3.task1;
 
 public class Dog extends Animal{
 

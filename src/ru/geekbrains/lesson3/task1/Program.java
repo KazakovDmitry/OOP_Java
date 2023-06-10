@@ -1,4 +1,4 @@
-package lesson3.task1;
+package ru.geekbrains.lesson3.task1;
 
 /**
  *     Создать классы Собака и Кот с наследованием от класса Животное.

@@ -1,4 +1,4 @@
-package lesson3.task2;
+package ru.geekbrains.lesson3.task2;
 
 public abstract class Employee implements Comparable<DZ.task2.Employee> {
 

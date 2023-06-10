@@ -1,4 +1,4 @@
-package lesson3.task1;
+package ru.geekbrains.lesson3.task1;
 
 import java.util.Random;
 

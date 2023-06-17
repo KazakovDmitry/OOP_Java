@@ -1,7 +1,5 @@
 package ru.geekbrains.lesson7.builder;
 
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class Order {
 

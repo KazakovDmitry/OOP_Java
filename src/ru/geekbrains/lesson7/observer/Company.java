@@ -16,9 +16,11 @@ public class Company {
         this.jobAgency = jobAgency;
     }
 
-    public void needEmployee(){
-        double salary = random.nextDouble(2500, 150000);
-        jobAgency.sendOffer(nameCompany, salary);
+    // private Vacancy vacancy;
+
+    public void needEmployee(Vacancy vacancy){
+        // double salary = random.nextDouble(2500, 150000);
+        jobAgency.sendOffer(nameCompany, vacancy.getSalary(), vacancy);
     }
 
 }

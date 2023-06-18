@@ -13,11 +13,7 @@ public class Program {
     public static void main(String[] args) {
 
         JobAgency jobAgency = new JobAgency();
-
-        Student student1 = new Student("A");
-        Object student2 = new Student("B");
-        Observer student3 = new Student("C");
-
+        Vacancy vacancy = new Vacancy("Программист Java", 80000, TypeVacancy.Программист);
 
         Company geekBrains = new Company("GeekBrains", 70000, jobAgency);
         Company google = new Company("Google", 100000, jobAgency);
@@ -26,15 +22,17 @@ public class Program {
         Master ivanov = new Master("Ivanov");
         Master petrov = new Master("Petrov");
         Student sidorov = new Student("Sidorov");
+        Ingeneer mask = new Ingeneer("Mask", TypeVacancy.Программист);
 
         jobAgency.registerObserver(ivanov);
         jobAgency.registerObserver(petrov);
         jobAgency.registerObserver(sidorov);
+        jobAgency.registerObserver(mask);
 
         for (int i = 0; i < 5; i++){
-            geekBrains.needEmployee();
-            google.needEmployee();
-            yandex.needEmployee();
+            geekBrains.needEmployee(vacancy);
+            // google.needEmployee();
+            // yandex.needEmployee();
         }
 
     }

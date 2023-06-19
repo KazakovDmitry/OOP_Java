@@ -13,14 +13,18 @@ public class Program {
     public static void main(String[] args) {
 
         JobAgency jobAgency = new JobAgency();
-        Vacancy vacancy = new Vacancy("Программист Java", 80000, TypeVacancy.Программист);
+        Vacancy programmerJava = new Vacancy("Программист Java", 80000, TypeVacancy.Программист);
+        Vacancy cleaner = new Vacancy("Уборщик", 5000, TypeVacancy.Уборщик);
+        Vacancy analyst = new Vacancy("Аналитик БД", 70000, TypeVacancy.Аналитик);
+        Vacancy programmerJavaMidl = new Vacancy("Программист Java Midl", 100000, TypeVacancy.Программист);
 
-        Company geekBrains = new Company("GeekBrains", 70000, jobAgency);
-        Company google = new Company("Google", 100000, jobAgency);
-        Company yandex = new Company("Yandex", 120000, jobAgency);
 
-        Master ivanov = new Master("Ivanov");
-        Master petrov = new Master("Petrov");
+        Company geekBrains = new Company("GeekBrains", jobAgency);
+        Company google = new Company("Google", jobAgency);
+        Company yandex = new Company("Yandex", jobAgency);
+
+        Master ivanov = new Master("Ivanov", TypeVacancy.Аналитик);
+        Master petrov = new Master("Petrov", TypeVacancy.Программист);
         Student sidorov = new Student("Sidorov");
         Ingeneer mask = new Ingeneer("Mask", TypeVacancy.Программист);
 
@@ -29,11 +33,11 @@ public class Program {
         jobAgency.registerObserver(sidorov);
         jobAgency.registerObserver(mask);
 
-        for (int i = 0; i < 5; i++){
-            geekBrains.needEmployee(vacancy);
-            // google.needEmployee();
-            // yandex.needEmployee();
-        }
+
+        yandex.needEmployee(cleaner);
+        geekBrains.needEmployee(programmerJava);
+        google.needEmployee(programmerJavaMidl);
+        yandex.needEmployee(analyst);
 
     }
 

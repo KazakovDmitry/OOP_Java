@@ -5,8 +5,6 @@ public class Vacancy {
     private String nameVacancy;
     private double salary;
 
-    // private enum TypeVacancy {Программист, Аналитик, Уборщик}
-
     TypeVacancy typeVacancy;
 
     public Vacancy(String nameVacancy, double salary, TypeVacancy typeVacancy) {
